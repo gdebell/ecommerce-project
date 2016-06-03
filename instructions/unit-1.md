@@ -4,9 +4,9 @@
 
 You will be working with a team of three or four people to create a mockup of an eCommerce site. Together, you will create the basic structure of the site which includes three pages:
 
-1. [Homepage](./mockups/homepage.png)
-1. [Products](./mockups/products.png)
-1. [Checkout](./mockups/checkout.png)
+1. [Homepage](../mockups/homepage.png)
+1. [Products](../mockups/products.png)
+1. [Checkout](../mockups/checkout.png)
 
 ##### After being assigned teams, do the following:
 

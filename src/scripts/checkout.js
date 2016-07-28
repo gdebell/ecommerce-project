@@ -1,36 +1,72 @@
 $(document).on('ready', function() {
   console.log('GO TEAM - Checkout');
-  // $('.firstName').on('blur keydown', function() {
-  //   if ($('.firstName').val().length < 3 || $('.firstName').val() === "") {
-  //   $('.firstNameShipping').addClass('has-error');
-  //   $('.firstNameShipping').removeClass('has-success');
-  //   } else {
-  //   $('.firstNameShipping').addClass('has-success');
-  //   $('.firstNameShipping').removeClass('has-error');
-  //   }
-  // });
-  nameValidate('.firstName','.firstNameShipping');
-  nameValidate('.lastName','.lastNameShipping');
-  // $('.lastName').on('blur keydown', function(){
-  //   if ($('.lastName').val().length < 3 || $('.lastName').val() === "") {
-  //       $('.lastNameShipping').addClass('has-error');
-  //       $('.lastNameShipping').removeClass('has-success');
-  //   } else {
-  //       $('.lastNameShipping').addClass('has-success');
-  //       $('.lastNameShipping').removeClass('has-error');
-  //   }
-  // })
-
+  // validate first name, last name, and address line 1 of shipping
+  textValidate('.firstNameS','.firstNameShipping');
+  textValidate('.lastNameS','.lastNameShipping');
+  textValidate('.addressS','.addressShipping');
+  textValidate('.cityS', '.cityShipping');
+  // validate state drop down of shipping
+  stateValidate('.dropDownS', '.stateShipping');
+  // validate zip of shipping
+  zipValidate('.zipS','.zipShipping');
+  // validate first name, last name, and address line 1 of billing
+  textValidate('.firstNameB','.firstNameBilling');
+  textValidate('.lastNameB','.lastNameBilling');
+  textValidate('.addressB','.addressBilling');
+  textValidate('.cityB', '.cityBilling');
+  // validate state drop down of billing
+  stateValidate('.dropDownB', '.stateBilling')
+  zipValidate('.zipB', '.zipBilling')
 });
 
-function nameValidate(input, labelClass){ $(input).on('blur keydown', function()
-    {
-    if ($(input).val().length < 3 || $(input).val() === "") {
-    $(labelClass).addClass('has-error');
-    $(labelClass).removeClass('has-success');
+
+
+
+/*
+=====================
+HELPER FUNCTIONS
+=====================
+*/
+
+function textValidate(input, divClass) {
+  $(input).on('blur keydown', function() {
+    if ($(input).val().length < 2) {
+      $(divClass).addClass('has-error');
+      $(divClass).removeClass('has-success');
     } else {
-    $(labelClass).addClass('has-success');
-    $(labelClass).removeClass('has-error');
+      $(divClass).addClass('has-success');
+      $(divClass).removeClass('has-error');
+    }
+
+  });
+}
+
+function stateValidate(input, divClass) {
+  $(input).on('blur change', function() {
+    if (this.value === "no_state") {
+      $(divClass).addClass('has-error');
+      $(divClass).removeClass('has-success');
+    }
+    else {
+      $(divClass).addClass('has-success');
+      $(divClass).removeClass('has-error');
+    }
+  });
+}
+
+function zipValidate(input, divClass) {
+
+
+  $(input).on('blur keydown', function() {
+
+    if ($(this).val().length < 4 || $(this).val().length > 9) {
+      $(divClass).addClass('has-error');
+      $(divClass).removeClass('has-success');
+    }
+    else {
+      $(divClass).addClass('has-success');
+      $(divClass).removeClass('has-error');
+
     }
   });
 }

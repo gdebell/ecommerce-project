@@ -49,11 +49,12 @@ var states = ['Alabama',
 'Wisconsin',
 'Wyoming'];
 
-console.log('this is the states.js file working');
+console.log('states.js works');
 
 $(document).on('ready',function() {
   for (var i = 0; i < states.length; i++) {
-    $('.dropDown').append("<option>" + states[i] + "</option>");
+    $('.dropDownS').append('<option>' + states[i] + '</option>');
+    $('.dropDownB').append('<option>' + states[i] + '</option>');
   }
 
 })

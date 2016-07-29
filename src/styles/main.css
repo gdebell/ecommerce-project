@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-/* Body */
+/* ------------------ Body ------------------ */
 
 body {
   background: #2c3e50;
@@ -91,9 +91,9 @@ header .navbar-brand {
   left: 70px;
 }
 
-/* ------------------ Main ------------------ */
+/* ------------------ Main - Tommy ------------------ */
 
-main {
+/*main {
   position: relative;
   max-width: 720px;
   z-index: 1;
@@ -103,7 +103,7 @@ main {
   margin-right: auto;
   margin-left: auto;
   width: 85%;
-}
+}*/
 
 /* ------------------ Footer ------------------ */
 

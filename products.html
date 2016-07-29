@@ -33,13 +33,42 @@
             <li role="navigation"><a class="navbar-link" href="#">About</a></li>
 
             <li role="navigation"><a class="navbar-link" href="checkout.html">Cart: <span id="cart"></span></a></li>
-
-
           </ul>
         </div>
       </nav>
     </header>
 
+    <div class="container">
+      <h1>Fishy Shop Products</h1>
+      <div class="row">
+        <br/>
+        <br/>
+        <div class="col-md-3" id="row1">
+          <h2 class="sortProduct1">Sort by item:</h2>
+          <select class="sortProductSelect1" id="select1">
+            <option id="blank" disabled selected>Select here:</option>
+            <option id ="tankSelect" value=1>Tank Fish</option>
+            <option id ="pondSelect"  value=2>Pond Fish</option>
+            <option id = "aquariumSelect" value=3>Aquarium Fish</option>
+          </select>
+          <br/>
+          <br/>
+          <h2 class="sortProduct2" id="row1">Sort by cost:</h2>
+          <select class="sortProductSelect2" id="select2">
+            <option id="blank" disabled selected>Select here:</option>
+            <option id ="underTenSelect" value=11>Items under $10</option>
+            <option id ="underTwentyFiveSelect" value=25>Items under $25</option>
+            <option id ="underFiftySelect" value=51>Items under $50</option>
+          </select>
+        </div>
+
+        <div class= "col-md-9" id="row1">
+          <div class="productRow" id="productRow">
+
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="container">
         <div class="row">

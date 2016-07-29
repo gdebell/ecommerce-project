@@ -2,17 +2,6 @@
   var timerReset = 6000;
   var shoppingCartCount = 0;
 
-  function carouselRight() {
-      if (i === (carouselArray.length - 1)) {
-          i = 0;
-      } else {
-          i++
-      }
-  };
-
-
-
-
   $(document).on('ready', function() {
       carouselRotate()
       addToCart('#shoppingCart1', '#product1')
@@ -55,6 +44,11 @@
               console.log("validEmail");
               $('#emailFormGroup .form-control:focus').css("border-color", "#00cc00");
               $('#emailFormGroup .form-control:focus').css("box-shadow", "inset 0 10px 10px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 204, 0, 1)");
+          }
+          else if ((emailStatus) === false) {
+            console.log("invalidEmail");
+            $('#emailFormGroup .form-control:focus').css("border-color", "#FF0000");
+            $('#emailFormGroup .form-control:focus').css("box-shadow", "inset 0 10px 10px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6)");
           }
       })
       $('#submitButton').click(function(event) {

@@ -1,5 +1,6 @@
   var carouselArray = ['https://placebear.com/650/300', 'https://placekitten.com/650/300', 'https://placebear.com/649/300'];
   var timerReset = 6000;
+  var shoppingCartCount = 0;
 
   function carouselRight() {
       if (i === (carouselArray.length - 1)) {
@@ -14,6 +15,9 @@
 
   $(document).on('ready', function() {
       carouselRotate()
+      addToCart('#shoppingCart1', '#product1')
+      addToCart('#shoppingCart2', '#product2')
+      addToCart('#shoppingCart3', '#product3')
       console.log('ready');
 
       $('#rightButton').on('click', function(event) {
@@ -43,7 +47,7 @@
           $('#photoContainer img').attr('src', carouselArray[j])
       })
 
-      $('#inputEmail').on('change paste keyup', function(event) {
+      $('#inputEmail').on('input', function(event) {
           event.preventDefault();
           var emailStatus = validateEmail($('#inputEmail').val());
 
@@ -60,36 +64,47 @@
               shakeEmail("#inputEmail");
           } else if ((emailStatus) === true) {
               $('#signup').fadeOut(2000)
-              setTimeout(function(){
-                $('#emailFormGroup').replaceWith("<span id='checkMark' style = 'font-size: 142px; font-color: green; margin-left: 266px; background-color: #47d147; border-radius: 10%;'> &#10003; </span>")
-                $('#signup').fadeIn(2000)
-                $('#checkMark').fadeOut(0).fadeIn(2000)
-                $('#signupDescription').replaceWith('<p>Thank You for subscribing!!!</p>')},2000)
+              setTimeout(function() {
+                  $('#emailFormGroup').replaceWith('<img src="src/images/Fish-mailbox.jpg"/>')
+                  $('#signup').fadeIn(2000)
+                  $('#checkMark').fadeOut(0).fadeIn(2000)
+                  $('#signupDescription').replaceWith('<p>Enjoy the fresh fish!</p>')
+                  $('#fishHeader').replaceWith('<header id="fishHeader"> <h2>Thanks!</h2></header>')
+              }, 2000)
           }
       });
   });
-  function addToCart(shopDivId) {
-    $(shopDivId).hover(function(event) {
 
-    }
-  }
+  function addToCart(shopDivId, wrapper) {
+      $(wrapper).mouseover(function() {
+          $(shopDivId).show();
+      }).mouseout(function() {
+          $(shopDivId).hide();
+      });
+      $(wrapper).click(function() {
+          console.log("working");
+          console.log(shoppingCartCount);
+          shoppingCartCount++;
+          $('#cart').replaceWith('<span id="cart">' + shoppingCartCount + '</span>');
+      });
+  };
 
 
 
   function carouselRotate() {
-      setInterval(function(){
-        $('#featurePhoto').fadeIn(1500).delay(1500).fadeOut(1500).delay(10)
-      setTimeout(function() {
-          var i = carouselArray.indexOf($('#photoContainer img').attr('src'))
-          if (i === (carouselArray.length - 1)) {
-              i = 0;
-          } else {
-              i++
-          }
-          $('#photoContainer img').attr('src', carouselArray[i])
+      setInterval(function() {
+          $('#featurePhoto').fadeIn(1500).delay(1500).fadeOut(1500).delay(10)
+          setTimeout(function() {
+              var i = carouselArray.indexOf($('#photoContainer img').attr('src'))
+              if (i === (carouselArray.length - 1)) {
+                  i = 0;
+              } else {
+                  i++
+              }
+              $('#photoContainer img').attr('src', carouselArray[i])
+          }, 4500)
       }, 4500)
-  },4500)
-}
+  }
 
   function validateEmail(email) {
       var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

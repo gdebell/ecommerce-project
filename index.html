@@ -15,81 +15,99 @@
 
 <body>
 
+<main>
+  <div class="container">
+      <div class="row  col-md-12" id="carousel">
+          <button type="button" class="btn btn-info col-md-1" id="leftButton"> &#8610; </button>
+          <div class="image  col-md-10" id="photoContainer">
+              <img class="col-md-12" id="featurePhoto" src='https://placebear.com/650/300' />
+          </div>
+          <button type="button" class="btn btn-info col-md-1" id="rightButton"> &#8611; </button>
+      </div>
 
-    <div class="container">
-        <div class="row  col-md-12" id="carousel">
-            <button type="button" class="btn btn-info col-md-1" id="leftButton"> &#8610; </button>
-            <div class="image  col-md-10" id="photoContainer">
-                <img class="col-md-12" id="featurePhoto" src='https://placebear.com/650/300' />
-            </div>
-            <button type="button" class="btn btn-info col-md-1" id="rightButton"> &#8611; </button>
-        </div>
-
-        <div class="row" id="products">
-            <div class="col-md-3 col-md-offset-1" id="product1">
-                <img src="https://placebear.com/200/200" alt="Featured Product 1" id="productImage" />
-                <h3 class="product1Title">
-                  Product1_Name
-                </h3>
-                <h4 class="product1Price">
-                  $71.00
-                </h4>
-                <div class="rating">
-                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-md-offset-1" id="product2">
-                <img src="https://placebear.com/200/199" alt="Featured Product 2" id="productImage" />
-                <h3 class="product2Title">
-                  Product2_Name
-                </h3>
-                <h4 class="product2Price">
-                $72.00
+      <div class="row" id="products">
+          <div class="col-md-3 col-md-offset-1" id="product1">
+              <img src="https://placebear.com/200/200" alt="Featured Product 1" id="productImage" />
+              <h3 class="product1Title">
+                Product1_Name
+              </h3>
+              <h4 class="product1Price">
+                $71.00
               </h4>
-                <div class="rating">
-                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-md-offset-1" id="product3">
-                <img src="https://placebear.com/200/201" alt="Featured Product 3" id="productImage" />
-                <h3 class="product3Title">
-                  Product3_Name
-                </h3>
-                <h4 class="product3Price">
-                  $73.00
-                </h4>
-                <div class="rating">
-                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                </div>
-            </div>
-        </div>
-        <div class="row  col-md-12" id="signup">
-            <aside class="col-md-8 col-md-offset-2">
-                <header>
-                    <h2>Signup Today!</h2>
-                </header>
-                <section id="signupDescription">
-                    <p>
-                        Do you love fish as much as us ?!? Sign-up for the number one fish news letter in the world. Featuring Fish Fact Friday and Fish Taco Tuesdays!
-                    </p>
-                </section>
-                <form class="emailSignup" novalidate>
-                    <div class="form-group col-md-9" id="emailFormGroup">
-                        <label for="inputEmail">Email address</label>
-                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="example@email.com">
-                        <small id="emailHelp" class="form-text text-muted">Do not worry this is most definitely not an email Phishing scheme!</small>
+              <div class="rating">
+                  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+              </div>
+              <div id="shoppingCart1">
+                <img src="src/images/ShoppingCart.png" alt="shoppingCart" />
+              </div>
+          </div>
+          <div class="col-md-3 col-md-offset-1" id="product2">
+              <img src="https://placebear.com/200/199" alt="Featured Product 2" id="productImage" />
+              <h3 class="product2Title">
+                Product2_Name
+              </h3>
+              <h4 class="product2Price">
+              $72.00
+            </h4>
+              <div class="rating">
+                  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+              </div>
+              <div id="shoppingCart2">
+                <img src="src/images/ShoppingCart.png" alt="shoppingCart" />
+              </div>
+          </div>
+          <div class="col-md-3 col-md-offset-1" id="product3">
+              <img src="https://placebear.com/200/201" alt="Featured Product 3" id="productImage" />
+              <h3 class="product3Title">
+                Product3_Name
+              </h3>
+              <h4 class="product3Price">
+                $73.00
+              </h4>
+              <div class="rating">
+                  <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+              </div>
+              <div id="shoppingCart3">
+                <img src="src/images/ShoppingCart.png" alt="shoppingCart" />
+              </div>
+          </div>
+      </div>
+      <div class="row  col-md-12" id="signup">
+          <aside class="col-md-8 col-md-offset-2">
+              <header id="fishHeader">
+                  <h2>Signup Today!</h2>
+              </header>
+              <section id="signupDescription">
+                  <p>
+                      Do you love fish as much as us ?!? Sign-up for the number one fish news letter in the world. Featuring Fish Fact Friday and Fish Taco Tuesdays!
+                  </p>
+              </section>
+              <form class="emailSignup" novalidate>
+                  <div class="form-group col-md-9" id="emailFormGroup">
+                      <label for="inputEmail">Email address</label>
+                      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="example@email.com">
+                      <small id="emailHelp" class="form-text text-muted">Do not worry this is most definitely not an email Phishing scheme!</small>
 
-                        <div class="col-md-3">
-                          <button type="submit" class="btn btn-primary" id="submitButton">Signup</button>
-                        </div>
+                      <div class="col-md-3">
+                        <button type="submit" class="btn btn-primary" id="submitButton">Signup</button>
+                      </div>
 
-                    </div>
+                  </div>
 
-                </form>
-            </aside>
-        </div>
+              </form>
+          </aside>
+      </div>
+<!-- Delete Me on merge -->
+      <div class="row col-md-12" id="testCart">
+        <span id="cart">
+        </span>
+      </div>
+<!-- Delete Me on merge -->
 
-    </div>
+
+  </div>
+</main>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

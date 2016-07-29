@@ -28,11 +28,11 @@
 <!-- SHIPPING INFO -->
         <div class="col-md-4"><h3>Shipping</h3>
 
-          <div class="form-group firstNameShipping">
+          <div class="form-group firstNameShipping required">
             <label>First Name</label>
             <input type="text" class="form-control firstNameS">
           </div>
-           <div class="form-group lastNameShipping">
+           <div class="form-group lastNameShipping required">
             <label>Last Name</label>
             <input type="text" class="form-control lastNameS">
           </div>
@@ -40,7 +40,7 @@
             <label>Company</label>
             <input type="text" class="form-control">
           </div>
-          <div class="form-group addressShipping">
+          <div class="form-group addressShipping required">
             <label>Address Line 1</label>
             <input type="text" class="form-control addressS">
           </div>
@@ -48,17 +48,17 @@
             <label>Addresss Line 2</label>
             <input type="text" class="form-control">
           </div>
-          <div class="form-group cityShipping">
+          <div class="form-group cityShipping required">
             <label>City</label>
             <input type="text" class="form-control cityS">
           </div>
-          <div class="form-group stateShipping">
+          <div class="form-group stateShipping required">
             <label>State</label>
-            <select class="form-control dropDownS stateS">
+            <select class="form-control dropDownS stateS required">
               <option disabled selected value="no_state">-Select Your State-</option>
             </select>
           </div>
-          <div class="form-group zipShipping">
+          <div class="form-group zipShipping required">
             <label>Zip</label>
             <input type="number" class="form-control zipS">
           </div>
@@ -72,11 +72,11 @@
       <section>
         <div class="col-md-4"><h3>Billing</h3>
 
-          <div class="form-group firstNameBilling">
+          <div class="form-group firstNameBilling required">
             <label>First Name</label>
             <input class="form-control firstNameB">
           </div>
-          <div class="form-group lastNameBilling">
+          <div class="form-group lastNameBilling required">
             <label>Last Name</label>
             <input class="form-control lastNameB">
           </div>
@@ -84,7 +84,7 @@
             <label>Company</label>
             <input class="form-control">
           </div>
-          <div class="form-group addressBilling">
+          <div class="form-group addressBilling required">
             <label>Address Line 1</label>
             <input class="form-control addressB">
           </div>
@@ -92,17 +92,17 @@
             <label>Addresss Line 2</label>
             <input class="form-control">
           </div>
-          <div class="form-group cityBilling">
+          <div class="form-group cityBilling required">
             <label>City</label>
             <input type="text" class="form-control cityB">
           </div>
-          <div class="form-group stateBilling">
+          <div class="form-group stateBilling required">
             <label>State</label>
             <select class="form-control dropDown dropDownB">
               <option disabled selected value="no_state">-Select Your State-</option>
             </select>
           </div>
-          <div class="form-group zipBilling">
+          <div class="form-group zipBilling required">
             <label>Zip</label>
             <input type="number" class="form-control zipB">
           </div>
@@ -111,18 +111,20 @@
 
         <div class="col-md-4"><h3>Credit Card Info</h3>
 <!-- CREDIT CARD INFO -->
-          <div class="form-group cardNumber">
+          <div class="form-group cardNumber required">
             <label>Credit Card Number</label>
             <input class="form-control cardNum">
           </div>
-          <div class="form-group expirationDate">
+          <div class="form-group expirationDate required">
             <label>Expiration</label>
             <input class="form-control expiration">
           </div>
-          <div class="form-group CVCNumber">
+          <div class="form-group CVCNumber required">
             <label>CVC</label>
-            <input class="form-control CVCnum">
+            <input class="form-control CVCnum required">
           </div>
+          <p class="save-status">
+          </p>
           <div class="form-group">
             <input class="btn btn-primary btn-lg btn-block" type="submit" value="Purchase">
           </div>

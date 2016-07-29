@@ -182,7 +182,7 @@ header .navbar-brand {
 
 /* ------------------ Main - Tommy ------------------ */
 
-main {
+/*main {
   position: relative;
   max-width: 720px;
   z-index: 1;
@@ -192,6 +192,11 @@ main {
   margin-right: auto;
   margin-left: auto;
   width: 85%;
+}*/
+
+.container {
+  z-index: 1;
+  position: relative;
 }
 
 /* ------------------ Footer ------------------ */

@@ -13,6 +13,14 @@
 <body>
 
   <div class="container">
+    <h1 class=col-md-12>Checkout
+    </h1>
+    <div class="row">
+      <div class="col-md-12 well well-lg">
+        <h3>Receipt</h3>
+        <p>Stuff you don't needs</p>
+      </div>
+    </div>
     <div class="row">
       <hr>
     </div>
@@ -56,11 +64,12 @@
           </div>
           <div class="form-group">
             <label>Billing Same As Shipping?
-              <input type="checkbox" class="form-control">
+              <input type="checkbox" class="form-control sameAs">
             </label>
           </div>
         </div>
 <!-- BILLING INFO -->
+      <section>
         <div class="col-md-4"><h3>Billing</h3>
 
           <div class="form-group firstNameBilling">
@@ -102,17 +111,17 @@
 
         <div class="col-md-4"><h3>Credit Card Info</h3>
 <!-- CREDIT CARD INFO -->
-          <div class="form-group">
+          <div class="form-group cardNumber">
             <label>Credit Card Number</label>
-            <input class="form-control">
+            <input class="form-control cardNum">
           </div>
-          <div class="form-group">
+          <div class="form-group expirationDate">
             <label>Expiration</label>
-            <input class="form-control">
+            <input class="form-control expiration">
           </div>
-          <div class="form-group">
+          <div class="form-group CVCNumber">
             <label>CVC</label>
-            <input class="form-control">
+            <input class="form-control CVCnum">
           </div>
           <div class="form-group">
             <input class="btn btn-primary btn-lg btn-block" type="submit" value="Purchase">
@@ -121,7 +130,7 @@
 
       </form>
   </div>
-  <!-- STRIPE CREDIT CARD VALIDATION -->
+  <!-- STRIPE CREDIT CARD VALIDATION SCRIPT -->
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="src/scripts/states.js"></script>

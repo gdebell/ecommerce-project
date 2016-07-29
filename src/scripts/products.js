@@ -1,13 +1,13 @@
 $.ajax ({
-<<<<<<< HEAD
+
   url:'http://galvanize-student-apis.herokuapp.com/gcommerce/products',
-=======
-  url:'https://galvanize-student-apis.herokuapp.com/gcommerce/products',
->>>>>>> 6daf4f40ab44d9e7050dbb25fadf9fab9af88fac
+
   method: 'GET'
 }).done (function(dataFromSite) {
 
   buildArticles(dataFromSite)
+
+
 
     $('#2').val(1);
     $('#3').val(3);

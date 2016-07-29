@@ -1,7 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
+/*.white {
+  background-color: white;
+  border-radius: 15px;
+}*/
+
 #carousel {
+  margin-top: 30px;
     padding: 20px;
     display: flex;
     height: 350px;

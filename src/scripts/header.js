@@ -8,8 +8,6 @@ $(document).on('ready', function() {
 
 
 
-
-
   $('#menuToggle').on('click', function() {
     $(this).toggleClass('toggled');
     $('header ul:not(.dropdown-menu)').slideToggle('block');

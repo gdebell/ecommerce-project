@@ -23,7 +23,6 @@ $(document).on('ready', function() {
 });
 
 
-
 /*
 =====================
 HELPER FUNCTIONS

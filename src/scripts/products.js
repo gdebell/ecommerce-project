@@ -7,8 +7,7 @@ $.ajax ({
 
   buildArticles(dataFromSite)
 
-
-
+//TO DO MAKE THIS A FUNCTION- USE MAP FUNCTION
     $('#2').val(1);
     $('#3').val(3);
     $('#4').val(3);
@@ -32,21 +31,20 @@ $.ajax ({
 
       $('.col-md-4').css('display', 'none');
 
+      //TO DO make this for loop into a forEach or map
       for (var i = 2; i < 15; i++) {
         if (($('#'+i).val()) == (titleSelect1 ))  {
-          console.log("test");
           $('#'+i).css('display', 'block');
         }
       }
     })
 
+//TO DO Refactor this into 5 lines
   $('#select2').change(function(e) {
     var titleSelect2 = $('#select2').val();
     var titleSelect2Num = parseInt(titleSelect2);
-    console.log(typeof titleSelect2Num);
 
     dataFromSite.forEach(function(el) {
-
       if (parseFloat(Math.round(el.price.replace('$', ''))) < titleSelect2Num) {
           // for(var j=2; j< 15; j++) {
             $('#'+el.id).css('display', 'block')
@@ -60,6 +58,7 @@ $.ajax ({
 
 var arrProductName = ["x", "Lion Fish", "Turtle", "Shark Fish", "Fish   Bowl Fish", "Silver Fish", "Lobster", "Gold Fish", "Slim Fish",  "Whale", "Clown Fish", "Guppy Fish", "Orange Fish", "Sucker Fish"];
 
+//TO DO Refactor this into 5 lines
 function buildArticles (arr) {
   for (var i=1; i < arr.length; i++) {
     var productWrapper = $('<div class="col-md-4" id="'+[i+1]+'"></div>');

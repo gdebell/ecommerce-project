@@ -35,7 +35,7 @@ function animateDiv(){
     });
 };
 
-var myCenter=new google.maps.LatLng(24.489853, -77.608439);
+var myCenter = new google.maps.LatLng(24.489853, -77.608439);
 
 function initialize()
 {
@@ -45,9 +45,9 @@ var mapProp = {
   mapTypeId:google.maps.MapTypeId.ROADMAP
   };
 
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-var marker=new google.maps.Marker({
+var marker = new google.maps.Marker({
   position:myCenter,
   });
 

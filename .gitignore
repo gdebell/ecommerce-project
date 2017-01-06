@@ -1,3 +1,4 @@
 .DS_Store
 *.bmpr
 node_modules
+config.js
